@@ -1,0 +1,18 @@
+# +------------------------------------------------------+ #
+# |               Información al usuario                 | #
+# | (Muestra hasta 10 líneas de información en el chat)  | #
+# +------------------------------------------------------+ #
+# Para introducir colores o formato en el texto use el
+# caracter de escape "§", y no "&" como tradicionalmente
+# se usa.
+# Puede encontrar aquí una lista con los formatos de
+# texto disponibles: http://wiki.ess3.net/mc
+#
+(1)livecraft1: ""
+(1)livecraft2: ""
+(1)livecraft3: ""
+(1)livecraft4: ""
+(1)livecraft5: ""
+(1)livecraft6: ""
+(1)livecraft7: ""
+(1)livecraft8: ""

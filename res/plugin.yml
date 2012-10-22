@@ -1,0 +1,16 @@
+name: LiveCraft
+main: com.gmail.zant95.LiveCraft.LiveCraft
+version: 4.0 
+commands:
+   livecraft:
+      aliases: [registro, register, lc]
+      description: Comando informativo.
+   permisos:
+      description: Mueve de invitado a rango usuario.
+      permission: livecraft.permisos
+   usuario:
+      description: Mueve a rango usuario.
+      permission: livecraft.usuario
+   supporter:
+      description: Mueve a rango supporter.
+      permission: livecraft.supporter
