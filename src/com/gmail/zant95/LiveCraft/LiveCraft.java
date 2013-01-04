@@ -39,24 +39,24 @@ public class LiveCraft extends JavaPlugin {
 					n = "1";
 				}
 				reloadConfig();
-				player.sendMessage("§7§l==================§6§lLive§9§lCraft§7§l===================");
+				player.sendMessage(ChatColor.GRAY + "" + ChatColor.BOLD + "==================" + ChatColor.GOLD + "" + ChatColor.BOLD + "Live" + ChatColor.BLUE + "" + ChatColor.BOLD + "Craft" + ChatColor.GRAY + "" + ChatColor.BOLD + "===================");
 				if(getConfig().get("(" + n + ")livecraft1") == null) {player.sendMessage(" ");}
-					else player.sendMessage(getConfig().getString("(" + n + ")livecraft1"));
-				if(getConfig().get("(" + n + ")livecraft2") == null) {player.sendMessage(ChatColor.GOLD + " No se encontraron resultados buscando por el término:");}
-					else player.sendMessage(getConfig().getString("(" + n + ")livecraft2"));
+					else player.sendMessage(format(getConfig().getString("(" + n + ")livecraft1")));
+				if(getConfig().get("(" + n + ")livecraft2") == null) {player.sendMessage(ChatColor.GOLD + " No se encontraron resultados buscando por:");}
+					else player.sendMessage(format(getConfig().getString("(" + n + ")livecraft2")));
 				if(getConfig().get("(" + n + ")livecraft3") == null) {player.sendMessage(ChatColor.GOLD + " \"" + ChatColor.RESET + n + ChatColor.GOLD + "\".");}
-					else player.sendMessage(getConfig().getString("(" + n + ")livecraft3"));
+					else player.sendMessage(format(getConfig().getString("(" + n + ")livecraft3")));
 				if(getConfig().get("(" + n + ")livecraft4") == null) {player.sendMessage(" ");}
-					else player.sendMessage(getConfig().getString("(" + n + ")livecraft4"));
+					else player.sendMessage(format(getConfig().getString("(" + n + ")livecraft4")));
 				if(getConfig().get("(" + n + ")livecraft5") == null) {player.sendMessage(" ");}
-					else player.sendMessage(getConfig().getString("(" + n + ")livecraft5"));
+					else player.sendMessage(format(getConfig().getString("(" + n + ")livecraft5")));
 				if(getConfig().get("(" + n + ")livecraft6") == null) {player.sendMessage(" ");}
-					else player.sendMessage(getConfig().getString("(" + n + ")livecraft6"));
+					else player.sendMessage(format(getConfig().getString("(" + n + ")livecraft6")));
 				if(getConfig().get("(" + n + ")livecraft7") == null) {player.sendMessage(" ");}
-					else player.sendMessage(getConfig().getString("(" + n + ")livecraft7"));
+					else player.sendMessage(format(getConfig().getString("(" + n + ")livecraft7")));
 				if(getConfig().get("(" + n + ")livecraft8") == null) {player.sendMessage(" ");}
-					else player.sendMessage(getConfig().getString("(" + n + ")livecraft8"));
-				player.sendMessage("§7§l=============================================");
+					else player.sendMessage(format(getConfig().getString("(" + n + ")livecraft8")));
+				player.sendMessage(ChatColor.GRAY + "" + ChatColor.BOLD + "=============================================");
 			}
 		if(command.getName().equalsIgnoreCase("permisos")){
 			if (args.length == 1) {
@@ -65,7 +65,7 @@ public class LiveCraft extends JavaPlugin {
 					player.chat("/manuadd " + user.getPlayer().getName() + " Usuario");
 					player.chat("/say Dad la bienvenida a " + user.getPlayer().getName() + " :D");
 					player.chat("/spawn " + user.getPlayer().getName());
-					user.sendMessage(ChatColor.GOLD + "¡Ya tienes permisos! Pero eso no quita que visites la web para");
+					user.sendMessage(ChatColor.GOLD + "�Ya tienes permisos! Pero eso no quita que visites la web para");
 					user.sendMessage(ChatColor.GOLD + "poder informarte sobre el servidor. Recuerda que si tienes");
 					user.sendMessage(ChatColor.GOLD + "alguna duda puedes hablar con un administrador.");
 					return true;
@@ -109,5 +109,31 @@ public class LiveCraft extends JavaPlugin {
 			}
 		}
 		return false;
+	}
+
+	private static String format(String text) {
+		return text	.replace("&0",ChatColor.BLACK.toString())
+					.replace("&1",ChatColor.DARK_BLUE.toString())
+					.replace("&2",ChatColor.DARK_GREEN.toString())
+					.replace("&3",ChatColor.DARK_AQUA.toString())
+					.replace("&4",ChatColor.DARK_RED.toString())
+					.replace("&5",ChatColor.DARK_PURPLE.toString())
+					.replace("&6",ChatColor.GOLD.toString())
+					.replace("&7",ChatColor.GRAY.toString())
+					.replace("&8",ChatColor.DARK_GRAY.toString())
+					.replace("&9",ChatColor.BLUE.toString())
+					.replace("&a",ChatColor.GREEN.toString())
+					.replace("&b",ChatColor.AQUA.toString())
+					.replace("&c",ChatColor.RED.toString())
+					.replace("&d",ChatColor.LIGHT_PURPLE.toString())
+					.replace("&e",ChatColor.YELLOW.toString())
+					.replace("&f",ChatColor.WHITE.toString())
+					.replace("&r",ChatColor.RESET.toString())
+					.replace("&l",ChatColor.BOLD.toString())
+					.replace("&m",ChatColor.STRIKETHROUGH.toString())
+					.replace("&n",ChatColor.UNDERLINE.toString())
+					.replace("&o",ChatColor.ITALIC.toString())
+					.replace("&k",ChatColor.MAGIC.toString());
+
 	}
 }
