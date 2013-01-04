@@ -65,7 +65,7 @@ public class LiveCraft extends JavaPlugin {
 					player.chat("/manuadd " + user.getPlayer().getName() + " Usuario");
 					player.chat("/say Dad la bienvenida a " + user.getPlayer().getName() + " :D");
 					player.chat("/spawn " + user.getPlayer().getName());
-					user.sendMessage(ChatColor.GOLD + "¡Ya tienes permisos! Pero eso no quita que visites la web para");
+					user.sendMessage(ChatColor.GOLD + "\u00A1Ya tienes permisos! Pero eso no quita que visites la web para");
 					user.sendMessage(ChatColor.GOLD + "poder informarte sobre el servidor. Recuerda que si tienes");
 					user.sendMessage(ChatColor.GOLD + "alguna duda puedes hablar con un administrador.");
 					return true;
